@@ -9,6 +9,7 @@ LEFT = 180
 DOWN = 270
 RIGHT = 0
 
+
 class SnakeBody:
     def __init__(self):
         self.segments=[]
@@ -33,6 +34,9 @@ class SnakeBody:
             new_y = self.segments[seg_num - 1].ycor()
             self.segments[seg_num].goto(new_x, new_y)
         self.head.forward(MOVE_DISTANCE)
+    
+    def extend(self):
+        self.add_segment((self).segments[-1].position())
 
     def up(self):
         if self.head.heading() != DOWN:
