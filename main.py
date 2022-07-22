@@ -1,7 +1,7 @@
 from turtle import Screen
-from snake_body import SnakeBody
-from food import Food
-from scoreboard import Scoreboard
+from components.snake_body import SnakeBody
+from components.food import Food
+from components.scoreboard import Scoreboard
 import time
 
 # create the game board
